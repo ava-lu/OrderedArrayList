@@ -1,1 +1,2 @@
 # OrderedArrayList
+My breakout room discussed what could be the difference between a NoNullArrayList constructor and an ArrayList constructor. We said that for the sort method, instead of using the built-in sort method, we could compare each value to the previous one and sort it that way. We explained what the difference was between OrderedArrayList and NoNullArrayList, which was that OrderedArrayList is a subclass of NoNullArrayList, which does not take in nulls.
