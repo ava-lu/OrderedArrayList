@@ -12,4 +12,10 @@ public class NoNullArrayList<T> extends ArrayList<T> {
     }
     return super.set(index, element);
   }
+  public boolean add(T e) {
+    if (e==null) {
+      throw new IllegalArgumentException("Cannot add nulls");
+    }
+    return super.add(e);
+  }
 }
