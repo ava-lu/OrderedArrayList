@@ -28,5 +28,18 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
     return super.add(e);
   }
+  public void add(int index, T element) {
+    if (element==null) {
+      throw new IllegalArgumentException("Cannot add nulls");
+    }
+    for (int i=0; i<this.size(); i++) {
+      if (i==index) super.add(i, element);
+    }
+    for (int i=this.size()-1; i>=0; i--) {
+      if (this.get(i).compareTo(this.get(i-1))==-1) {
+        super.set(i,this.get(i-1));
+      }
+    }
+  }
 
 }
