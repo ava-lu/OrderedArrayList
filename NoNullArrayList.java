@@ -18,4 +18,10 @@ public class NoNullArrayList<T> extends ArrayList<T> {
     }
     return super.add(e);
   }
+  public void add(int index, T element) {
+    if (element==null) {
+      throw new IllegalArgumentException("Cannot add nulls");
+    }
+    super.add(index, element);
+  }
 }
